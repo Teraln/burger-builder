@@ -15,7 +15,7 @@ const hamburger = props => {
   }
   return (
     <div className={attachedClasses.join(" ")}>
-      <div className={classes.hamburgerBox}>
+      <div className={classes.hamburgerBox} onClick={props.parentCallback}>
         <div className={classes.hamburgerInner}></div>
       </div>
     </div>
