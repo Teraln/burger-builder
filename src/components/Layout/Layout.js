@@ -7,14 +7,13 @@ import SideDrawer from "../Burger/Navigation/SideDrawer/SideDrawer";
 
 class Layout extends Component {
   state = {
-    showSideDrawer: true
+    showSideDrawer: false
   };
 
   sideDrawerToggleHandler = () => {
-    const currentState = this.state.showSideDrawer;
-    const newState = !currentState;
-
-    this.setState({ showSideDrawer: newState });
+    this.setState(prevState => {
+      return { showSideDrawer: !prevState.showSideDrawer };
+    });
   };
 
   render() {
@@ -22,7 +21,7 @@ class Layout extends Component {
       <Aux>
         <Toolbar
           open={this.state.showSideDrawer}
-          parentCallback={this.sideDrawerToggleHandler}
+          hamburgerClicked={this.sideDrawerToggleHandler}
         />
         <SideDrawer
           open={this.state.showSideDrawer}

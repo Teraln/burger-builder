@@ -6,14 +6,9 @@ import NavigationItems from "../NavigationItems/NavigationItems";
 import Hamburger from "./Hamburger/Hamburger";
 
 const toolbar = props => {
-
-  const parentCallback = () => {
-    props.parentCallback()
-  }
-
   return (
     <header className={classes.Toolbar}>
-      <Hamburger open={props.open} parentCallback={parentCallback} />
+      <Hamburger open={props.open} clicked={props.hamburgerClicked} />
       <div className={classes.Logo}>
         <Logo />
       </div>
