@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-import Aux from "../../hoc/Aux";
+import Aux from "../Aux";
 import classes from "./Layout.module.css";
-import Toolbar from "../Burger/Navigation/Toolbar/Toolbar";
-import SideDrawer from "../Burger/Navigation/SideDrawer/SideDrawer";
+import Toolbar from "../../components/Burger/Navigation/Toolbar/Toolbar";
+import SideDrawer from "../../components/Burger/Navigation/SideDrawer/SideDrawer";
 
 class Layout extends Component {
   state = {
